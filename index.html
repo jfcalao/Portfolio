@@ -1,46 +1,102 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Hola! soy Juan F Calao</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <a>Portafolio</a>
-          </li>
-          <li>
-            <a>experiencia</a>
-          </li>
-          <li>
-            <a>trabajemos juntos</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <section>
-      <h1>Hola! Soy <strong>Juan Felipe</strong> <br> Desarrollador web <br> con pasión por el <strong>aprendizaje</strong> </h1>
-      <img src="" alt=""> portada
-    </section>
-    <section>
-      <h2>Portafolio (Proyectos Destacados)</h2>
-      <article>
-        <h3>Money Maker</h3>
-        <h6>React Native / React</h6>
-        <p><small><strong>Fecha:</strong> 01/07/2018</small></p>
-        <p><small><strong>Puedes verlo en:</strong> https://github.com/jfcalao/FirstReactNativeApp</small></p>
-        <p>MoneyMaher surge de mi deseo y necesidad de registrar y administrar 
-          correctamente mis ingresos y egresos economicos con el fin de organizar 
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hola! soy Juan F Calao</title>
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+  <header class="header">
+
+    <figure class="logo">
+      <img src="images/logo2.png" alt="imagen de mi logo" width="300">
+    </figure>
+
+    <nav class="menu">
+      <ul>
+        <li>
+          <a href="#portfolio">Portafolio</a>
+        </li>
+        <li>
+          <a href="#events">experiencia</a>
+        </li>
+        <li>
+          <a href="#contact">trabajemos juntos</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+  <section class="hero">
+    <h1>Hola! Soy <strong>Juan Felipe</strong> <br> Desarrollador <strong>web</strong> con <br> pasión por el
+      <strong>aprendizaje</strong> </h1>
+    <!-- <img src="images/portada.jpg" alt="imagen de portada" width="500"> -->
+  </section>
+  <section id="portfolio" class="portafolio">
+    <h2>Portafolio (Proyectos Destacados)</h2>
+    <article class="project">
+      <div class="project-details">
+        <h3 class="project-title">Money Maker</h3>
+        <h6 class="project-course">React Native / React</h6>
+        <p class="project-dates"><small><strong>Fecha:</strong> 01/07/2018</small></p>
+        <p class="project-url"><small><strong>Puedes verlo en:</strong>
+            https://github.com/jfcalao/FirstReactNativeApp</small></p>
+        <p class="project-description">MoneyMaker surge de mi deseo y necesidad de registrar y administrar
+          correctamente mis ingresos y egresos economicos con el fin de organizar
           y tener el control de mi vida financiera y la de todos a los que comparten mi deseo.
         </p>
+      </div>
+      <figure class="project-imageContainer">
+        <img class="project-image" src="images/project-image.jpeg" alt="imagen moneymaker" width="130">
+      </figure>
+    </article>
+    <article class="project">
+      <div class="project-details">
+        <h3 class="project-title">Money Maker</h3>
+        <h6 class="project-course">React Native / React</h6>
+        <p class="project-dates"><small><strong>Fecha:</strong> 01/07/2018</small></p>
+        <p class="project-url"><small><strong>Puedes verlo en:</strong>
+            https://github.com/jfcalao/FirstReactNativeApp</small></p>
+        <p class="project-description">MoneyMaker surge de mi deseo y necesidad de registrar y administrar
+          correctamente mis ingresos y egresos economicos con el fin de organizar
+          y tener el control de mi vida financiera y la de todos a los que comparten mi deseo.
+        </p>
+      </div>
+      <figure class="project-imageContainer">
+        <img class="project-image" src="images/project-image.jpeg" alt="imagen moneymaker" width="130">
+      </figure>
+    </article>
+  </section>
+  <section id="events">
+    <h2>Mas sobre mi experiencia </h2>
 
-      </article>
-    </section>
-    <section>eventos
+    <article class="event">
+      <figure class="event-imageContainer">
+        <img class="event-image" src="images/experiencia.png" alt="Imagen experiencia" width="500">
+      </figure>
+      <h3 class="event-title">Evento importante</h3>
+      <p class="event-description">Este es el evento mas importante y trascendente dentro de todo youtube. Te invito a
+        que le eches un vistazo.</p>
+      <a class="event-url" href="https://www.youtube.com/watch?v=j7de5B-BUmE" target="_blank">Ver mas</a>
+    </article>
+  </section>
+  <section id="contact" class="contact">
+    <form action="https://www.youtube.com/" class="form-email">
+      <h3>¿Creamos algo juntos?</h3>
+      <input type="text" placeholder="Dejame tu email">
+      <button>enviar</button>
 
-    </section>
-    <section>contacto</section>
-    <footer>footer</footer>
-  </body>
+    </form>
+
+
+  </section>
+  <footer class="footer">footer</footer>
+</body>
+
 </html>
