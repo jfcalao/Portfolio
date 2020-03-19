@@ -45,6 +45,15 @@ h1 strong {
   height: 72.03px;
   align-items: center;
 }
+.container {
+  display: inherit;
+  justify-content: inherit;
+  height: inherit;
+  align-items: inherit;
+  width: 1000px;
+  margin: 0 auto;
+  flex-wrap: inherit;
+}
 .menu {
   height: inherit;
 }
@@ -72,13 +81,15 @@ h1 strong {
 }
 .hero {
   height: 300px;
-  background-image: url(../images/hero.JPG);
+
   background-color: #1b2127;
-  background-size: 500px 300px;
-  background-repeat: no-repeat;
-  background-position-x: right;
+
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+.hero-image {
+  height: inherit;
 }
 
 .portafolio {
@@ -120,6 +131,7 @@ h1 strong {
 }
 .event-list {
   display: flex;
+  flex-wrap: wrap;
 }
 .event-list-title {
   margin-left: 20px;
@@ -154,6 +166,56 @@ h1 strong {
   border: 1px solid #026fff;
   padding: 10px 40px;
   border-radius: 5px;
+}
+.contact {
+  background-color: #056fff;
+  color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact h3 {
+  font-family: "Source Sans Pro", sans-serif;
+}
+.contact input {
+  border-color: grey;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 20px 10px 25px;
+  background-image: url("../images/mail.svg");
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 5px;
+}
+.contact button {
+  display: block;
+  background-color: transparent;
+  padding: 7px 0;
+  color: white;
+  width: 100px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.social-link {
+  display: inline-block;
+  margin: 0 10px;
+  height: 50px;
+  width: 50px;
+  background-size: 50px 50px;
+}
+.social-link.twitter {
+  background-image: url("../images/twitter.svg");
+}
+.social-link.facebook {
+  background-image: url("../images/facebook.svg");
+}
+.social-link.github {
+  background-image: url("../images/github.svg");
+}
+.social-link.instagram {
+  background-image: url("../images/instagram.svg");
 }
 .footer {
   background-color: #1b2127;
