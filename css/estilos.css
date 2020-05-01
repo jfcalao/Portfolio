@@ -44,13 +44,15 @@ h1 strong {
   justify-content: space-between;
   height: 72.03px;
   align-items: center;
+  flex-wrap: wrap;
 }
 .container {
   display: inherit;
   justify-content: inherit;
   height: inherit;
   align-items: inherit;
-  width: 1000px;
+  max-width: 1000px;
+  flex:1;
   margin: 0 auto;
   flex-wrap: inherit;
 }
@@ -87,6 +89,7 @@ h1 strong {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .hero-image {
   height: inherit;
@@ -106,6 +109,7 @@ h1 strong {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .project strong {
   font-family: "Fjalla One", sans-serif;
@@ -127,7 +131,10 @@ h1 strong {
   width: 500px;
 }
 .project-imageContainer {
-  width: 500px;
+  width: 300px;
+}
+.project-imageContainer img{
+  padding-left: 85px;
 }
 .event-list {
   display: flex;
@@ -174,6 +181,7 @@ h1 strong {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap:wrap;
 }
 .contact h3 {
   font-family: "Source Sans Pro", sans-serif;
@@ -222,6 +230,7 @@ h1 strong {
   color: white;
   display: flex;
   justify-content: space-between;
+  flex-wrap:wrap;
 }
 .footer div {
   display: flex;
@@ -229,4 +238,32 @@ h1 strong {
 }
 .footer a {
   color: white;
+}
+@media screen and (max-width:1024px){
+  
+}
+@media screen and (max-width:767px){
+  .header{
+    display: block;
+    height:auto;
+    text-align: center;
+    /* border:solid green 5px; */
+  }
+  .header a{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header ul{
+    display: block;
+  }
+  .header li{
+    height: 50px;
+  }
+}
+@media screen and (max-width:480px){
+  
+}
+@media screen and (max-width:320px){
+  
 }
