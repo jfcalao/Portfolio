@@ -128,13 +128,15 @@ h1 strong {
   font-size: 20px;
 }
 .project-details {
-  width: 500px;
+  width: 50%;
 }
 .project-imageContainer {
-  width: 300px;
+  width: 50%;
+  text-align: center;
 }
-.project-imageContainer img{
-  padding-left: 85px;
+.project-imageContainer img {
+  max-width: 100%;
+
 }
 .event-list {
   display: flex;
@@ -214,7 +216,9 @@ h1 strong {
   background-size: 50px 50px;
 }
 .social-link.twitter {
+  
   background-image: url("../images/twitter.svg");
+  
 }
 .social-link.facebook {
   background-image: url("../images/facebook.svg");
@@ -259,6 +263,15 @@ h1 strong {
   }
   .header li{
     height: 50px;
+  }
+  .project{
+    display: block;
+  }
+  .project-details{
+    width: auto;
+  }
+  .project-imageContainer{
+    width: auto;
   }
 }
 @media screen and (max-width:480px){
