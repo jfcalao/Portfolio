@@ -1,3 +1,47 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?dhefln');
+  src:  url('../fonts/icomoon.eot?dhefln#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?dhefln') format('truetype'),
+    url('../fonts/icomoon.woff?dhefln') format('woff'),
+    url('../fonts/icomoon.svg?dhefln#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+  content: "\e900";
+}
+.icon-github:before {
+  content: "\e901";
+}
+.icon-instagram:before {
+  content: "\e902";
+}
+.icon-facebook:before {
+  content: "\e903";
+}
+.icon-menu:before {
+  content: "\e904";
+}
+
+
 body {
   font-family: "Source Sans Pro", sans-serif;
 
@@ -56,8 +100,11 @@ h1 strong {
   margin: 0 auto;
   flex-wrap: inherit;
 }
+.burger-button{
+ display: none;   
+}
 .menu {
-  height: inherit;
+  height: auto;
 }
 .header ul {
   height: inherit;
@@ -215,21 +262,11 @@ h1 strong {
   height: 43px;
   width: 43px;
   background-size: 43px 43px;
+  color: white;
+  text-decoration: none;
+  font-size: 43px;
 }
-.social-link.twitter {
-  
-  background-image: url("../images/twitter.svg");
-  
-}
-.social-link.facebook {
-  background-image: url("../images/facebook.svg");
-}
-.social-link.github {
-  background-image: url("../images/github.svg");
-}
-.social-link.instagram {
-  background-image: url("../images/instagram.svg");
-}
+
 .footer {
   background-color: #2c2f33;
   color: white;
@@ -244,10 +281,11 @@ h1 strong {
 .footer a {
   color: white;
 }
-@media screen and (max-width:1024px){
+@media screen and (max-width:1023px){
   .container{
     padding: 0 1em;
   }
+  
   .hero{
     height: auto;
     position: relative;
@@ -270,6 +308,37 @@ h1 strong {
   }
 }
 @media screen and (max-width:767px){
+  .burger-button{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: rgba(0,0,0,.7);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: white;
+    z-index: 4;
+  }
+  .menu{
+    position: fixed;
+    z-index: 3;
+    background:rgba(27, 33, 39,.9); ;
+    top: 0;
+    bottom: 0;
+    left: -100vw;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    
+  }
+  .menu.is-active{
+    left: 0;
+  }
   .header{
     display: block;
     height:auto;
@@ -285,7 +354,13 @@ h1 strong {
     display: block;
   }
   .header li{
-    height: 50px;
+    height: 60px;
+    font-size: 2em;
+    margin-bottom: .8em;
+  }
+  .header img{
+    width: 13em;
+    height: auto;
   }
   .hero-image{
     top: -3em;
@@ -314,7 +389,7 @@ h1 strong {
     margin: .3em 0;
    }
    .project-description{
-     font-size: .9em;
+     font-size: 1.2em;
      margin:.3em 0;
    }
   .project-imageContainer{
@@ -335,8 +410,15 @@ h1 strong {
     top: 0;
   }
   .hero h1{
-    z-index: 2;
+    
     font-size: 1.5em;
+  }
+  .event-list-title {
+    margin: .8em 0;
+  }
+  h2{
+    margin: .8em 0;
+    
   }
   .project-details{
     font-size: 12px;

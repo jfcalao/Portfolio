@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <i class="icon-menu burger-button" id='burger-button'></i>
   <header class="header">
     <div class="container">
       <figure class="logo">
@@ -34,16 +35,16 @@
     </div>
   </header>
   <section class="hero">
-      <div class="container">
-        <h1>
-          Hola! Soy <strong>Juan Felipe</strong> <br />
-          Desarrollador <strong>web</strong> con <br />
-          pasión por el <strong>aprendizaje</strong>
-        </h1>
-        <img class="hero-image" src="images/hero.JPG" alt="imagen de portada" />
-      </div>
+    <div class="container">
+      <h1>
+        Hola! Soy <strong>Juan Felipe</strong> <br />
+        Desarrollador <strong>web</strong> con <br />
+        pasión por el <strong>aprendizaje</strong>
+      </h1>
+      <img class="hero-image" src="images/hero.JPG" alt="imagen de portada" />
+    </div>
   </section>
-  <iframe src="https://jfcalaop.netlify.app" width="500" height="500" frameborder="0"></iframe>
+
   <section id="portfolio" class="portafolio">
     <div class="container">
       <h2>Portafolio (Proyectos Destacados)</h2>
@@ -161,10 +162,10 @@
       </form>
       <div class="social">
 
-        <a href="https://twitter.com/juanfelipecalao" class="social-link twitter" target="_blank"></a>
-        <a href="https://www.facebook.com/juanfe.calao" class="social-link facebook"></a>
-        <a href="https://github.com/jfcalao" class="social-link github"></a>
-        <a href="https://instagram.com/calao_juan_felipe" class="social-link instagram"></a>
+        <a href="https://twitter.com/juanfelipecalao" class="social-link icon-twitter" target="_blank"></a>
+        <a href="https://www.facebook.com/juanfe.calao" class="social-link icon-facebook"></a>
+        <a href="https://github.com/jfcalao" class="social-link icon-github"></a>
+        <a href="https://instagram.com/calao_juan_felipe" class="social-link icon-instagram"></a>
       </div>
     </div>
   </section>
@@ -183,6 +184,39 @@
       </div>
     </div>
   </footer>
+  <script>
+    const menu = document.querySelector('.menu')
+    const burgerButton = document.querySelector('#burger-button')
+    const li = document.querySelectorAll('.menu a')
+    /* for (let i = 0; i < li.length; i++) {
+      const element = li[i];
+      element.addEventListener('click', showHide)
+    } */
+    const ipad = window.matchMedia('screen and (max-width: 767px)')
+    ipad.addListener(validation)
+    validation(ipad)
+    function validation(event) {
+      if (event.matches) {
+        li.forEach((element) => element.addEventListener('click', showHide))
+        burgerButton.addEventListener('click', showHide)
+
+      } else {
+        li.forEach((element) => element.removeEventListener('click', showHide))
+        burgerButton.removeEventListener('click', showHide)
+      }
+    }
+    function showHide() {
+      if (menu.classList.contains('is-active')) {
+        menu.classList.remove('is-active')
+      } else {
+        menu.classList.add('is-active')
+
+      }
+
+    }
+
+
+  </script>
 </body>
 
 </html>
