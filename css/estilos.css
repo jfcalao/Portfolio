@@ -248,6 +248,26 @@ h1 strong {
   .container{
     padding: 0 1em;
   }
+  .hero{
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 30PX;
+  }
+  .hero-image{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    top: -8.5em;
+    bottom: 0;
+    width: 100%;
+
+  }
+  .hero h1{
+    z-index: 2;
+    font-size: 2em;
+  }
 }
 @media screen and (max-width:767px){
   .header{
@@ -266,6 +286,9 @@ h1 strong {
   }
   .header li{
     height: 50px;
+  }
+  .hero-image{
+    top: -3em;
   }
   .project{
     display: block;
@@ -308,6 +331,13 @@ h1 strong {
   
 }
 @media screen and (max-width:480px){
+  .hero-image{
+    top: 0;
+  }
+  .hero h1{
+    z-index: 2;
+    font-size: 1.5em;
+  }
   .project-details{
     font-size: 12px;
   }
@@ -339,6 +369,15 @@ h1 strong {
   
 }
 @media screen and (max-width:320px){
+
+  .hero{
+    padding: 2em 0;
+  }
+  .hero h1{
+    font-size: 1.2em;
+  }
+
+
   .project-details{
     
     font-size: 12px;
