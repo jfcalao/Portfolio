@@ -79,7 +79,8 @@ figure {
 }
 
 h1 strong {
-  color: #026fff;
+  /* color: #026fff; */
+  color: red;
 }
 .header {
   background-color: #1b2127;
